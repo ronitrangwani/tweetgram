@@ -2,6 +2,7 @@ import React from "react";
 import { Grid } from "@mui/material";
 import Navigation from "../Navigation/Navigation";
 import HomeSection from "../HomeSection/HomeSection";
+import HappeningSection from "../HappeningSection/HappeningSection";
 
 const HomePage = () => {
   return (
@@ -9,11 +10,16 @@ const HomePage = () => {
       <Grid item xs={0} lg={2.5} className="lg:block w-full relative">
         <Navigation />
       </Grid>
-      <Grid item xs={12} lg={6} className="lg:block w-full relative">
+      <Grid
+        item
+        xs={12}
+        lg={6}
+        className="px-5 lg:px-9 hidden lg:block w-full relative"
+      >
         <HomeSection />
       </Grid>
       <Grid item xs={0} lg={3} className="lg:block w-full relative">
-        <p className="text-right">right part</p>
+        <HappeningSection />
       </Grid>
     </Grid>
   );
