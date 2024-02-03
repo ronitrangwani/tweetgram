@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import { Button } from "@mui/base";
+import SubscriptionModal from "../SubscriptionModal/SubscriptionModal";
+import { Button } from "@mui/material";
 
 const HappeningSection = () => {
+  const [openSubscriptionModal, setOpenSubscriptionModal] = useState(false);
+  const handleOpenSubscriptionModal = () => setOpenSubscriptionModal(true);
+  const handleCloseSubscriptionModal = () => setOpenSubscriptionModal(false);
+
   const handleChangeTheme = () => {};
   return (
     <div className="py-5 sticky top">
@@ -27,6 +32,7 @@ const HappeningSection = () => {
         <Button
           variant="contained"
           sx={{ padding: "10px", paddingX: "20px", borderRadius: "25px" }}
+          onClick={handleOpenSubscriptionModal}
         >
           Get Verified
         </Button>
@@ -47,6 +53,12 @@ const HappeningSection = () => {
             <MoreHorizIcon />
           </div>
         ))}
+      </section>
+      <section>
+        <SubscriptionModal
+          open={openSubscriptionModal}
+          handleClose={handleCloseSubscriptionModal}
+        />
       </section>
     </div>
   );
