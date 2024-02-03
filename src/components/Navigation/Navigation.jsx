@@ -59,7 +59,10 @@ const Navigation = () => {
       </div>
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <Avatar alt="username" src="" />
+          <Avatar
+            alt="username"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5QX51-SXSdd_3NLB1hK4KR0lQrkoKlPsPRG8f18ODpBbLovPMJ_L9z55JCbBo9TrCduw&usqp=CAU"
+          />
           <div className="flex flex-col ">
             <span>Ron Ran</span>
             <span className="opacity-70">@ronran</span>

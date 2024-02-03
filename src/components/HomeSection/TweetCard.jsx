@@ -47,13 +47,17 @@ const TweetCard = () => {
           onClick={() => navigate(`/profile/${6}`)}
           className="cursor-pointer"
           alt="username"
-          src=""
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5QX51-SXSdd_3NLB1hK4KR0lQrkoKlPsPRG8f18ODpBbLovPMJ_L9z55JCbBo9TrCduw&usqp=CAU"
         />
         <div className="w-full">
           <div className="flex cursor-pointer items-center space-x-2">
             <span className="font-semibold">Ron Ran</span>
             <span className="text-gray-600">@ronran . 2 min</span>
-            <img className="ml-2 w-5 h-5" src="" alt="" />
+            <img
+              className="ml-2 w-5 h-5"
+              src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png"
+              alt=""
+            />
           </div>
           <div>
             <Button
@@ -84,7 +88,7 @@ const TweetCard = () => {
               <p className="mb-2 p-0">Full Stack Clone</p>
               <img
                 className="w-[28rem] border-gray-400 p-5 rounded-md"
-                src=""
+                src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
                 alt=""
               />
             </div>

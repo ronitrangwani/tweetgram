@@ -43,7 +43,10 @@ const HomeSection = () => {
       </section>
       <section className="pb-10">
         <div className="flex space-x-5">
-          <Avatar src="" alt="username" />
+          <Avatar
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5QX51-SXSdd_3NLB1hK4KR0lQrkoKlPsPRG8f18ODpBbLovPMJ_L9z55JCbBo9TrCduw&usqp=CAU"
+            alt="username"
+          />
           <div className="w-full">
             <form onSubmit={formik.onSubmit}>
               <div>
