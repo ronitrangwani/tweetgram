@@ -9,19 +9,18 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import TweetCard from "../HomeSection/TweetCard";
+import ProfileModal from "./ProfileModal";
 
 const Profile = () => {
-  const [tabValue, setTabValue] = useState(1);
   const navigate = useNavigate();
+  const [tabValue, setTabValue] = useState(1);
+  const [openProfileModal, setOpenProfileModal] = useState(false);
+  const handleOpenProfileModal = () => setOpenProfileModal(true);
+  const handleCloseProfileModal = () => setOpenProfileModal(false);
 
   const handleBack = () => {
     navigate(-1);
   };
-
-  const handleOpenProfileModel = () => {
-    console.log("open profile model");
-  };
-
   const handleFollowUser = () => {};
 
   const handleTabChange = (event, newValue) => {
@@ -34,7 +33,9 @@ const Profile = () => {
   };
   return (
     <div>
-      <section className={`z-50 flex items-center sticky top-0 bg-opacity-95`}>
+      <section
+        className={` bg-white z-50 flex items-center sticky top-0 bg-opacity-95`}
+      >
         <KeyboardBackspaceIcon
           className="cursor-pointer"
           onClick={handleBack}
@@ -64,7 +65,7 @@ const Profile = () => {
                 borderRadius: "20px",
                 height: "40px",
               }}
-              onClick={handleOpenProfileModel}
+              onClick={handleOpenProfileModal}
             >
               Edit Profile
             </Button>
@@ -143,6 +144,12 @@ const Profile = () => {
             <TabPanel value="4">Likes</TabPanel>
           </TabContext>
         </Box>
+      </section>
+      <section>
+        <ProfileModal
+          open={openProfileModal}
+          handleClose={handleCloseProfileModal}
+        />
       </section>
     </div>
   );
