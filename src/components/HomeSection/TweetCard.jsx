@@ -84,7 +84,10 @@ const TweetCard = () => {
             </Menu>
           </div>
           <div className="mt-2">
-            <div className="cursor-pointer">
+            <div
+              className="cursor-pointer"
+              onClick={() => navigate(`/tweet/${3}`)}
+            >
               <p className="mb-2 p-0">Full Stack Clone</p>
               <img
                 className="w-[28rem] border-gray-400 p-5 rounded-md"
